@@ -1,1 +1,4 @@
-# Godot-Project-Collaboration
+# Godot Project Collaboration
+
+
+Setup git integration with Godot client and server.
