@@ -1,10 +1,10 @@
-//
+
 //  main.cpp
 //  TCPServer
 //
 //  Created by Siddharth Sen on 29/03/19.
 //  Copyright © 2019 Siddharth Sen. All rights reserved.
-//
+
 
 #include <iostream>
 #include <sys/types.h>
@@ -17,8 +17,7 @@
 
 int main() {
     
-    
-    
+        
     //Create a socket
     int listening = socket(AF_INET, SOCK_STREAM, 0);//Ver. 4
     if (listening == -1){
@@ -59,8 +58,6 @@ int main() {
     
     
     //close listening port
-    
-
     close(listening);
     
     memset(host, 0, NI_MAXHOST); //To Clean up garbage
@@ -103,16 +100,8 @@ int main() {
         
     }
     
-    
     //close socket
     close(clientSocket);
-    
-    
-    
-    
-    
-    
-    
     
     return 0;
 }
