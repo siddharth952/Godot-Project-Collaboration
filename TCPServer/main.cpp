@@ -5,7 +5,6 @@
 //  Created by Siddharth Sen on 29/03/19.
 //  Copyright © 2019 Siddharth Sen. All rights reserved.
 
-
 #include <iostream>
 #include <sys/types.h>
 #include <sys/socket.h>
@@ -13,7 +12,6 @@
 #include <string.h>
 #include <arpa/inet.h>
 #include <unistd.h>
-
 
 int main() {
     
@@ -42,7 +40,6 @@ int main() {
         std::cerr<<"Not able to listen";
         return -3;
     }
-    
     //accept calls
     sockaddr_in client;
     socklen_t clientSize = sizeof(client);
@@ -63,8 +60,6 @@ int main() {
     memset(host, 0, NI_MAXHOST); //To Clean up garbage
     memset(svc, 0, NI_MAXSERV); //To Clean up garbage
     
-    
-    
     int result = getnameinfo( (sockaddr*)&client, sizeof(client), host, NI_MAXHOST, svc, NI_MAXSERV, 0);   // Name of Computer
     if (result) {
         std::cout<<host<<" Connected On " << svc << std::endl;
@@ -74,7 +69,6 @@ int main() {
         std::cout<<host<<" Connected On " <<ntohs(client.sin_port) << std::endl;
     }
 
-    
     //while receiving display message ie echo the message
     
     char buff[4096];
@@ -97,9 +91,7 @@ int main() {
         //Resend message
         send(clientSocket, buff, bytesReceived+1, 0); // +1 for 0 at end
         
-        
     }
-    
     //close socket
     close(clientSocket);
     
