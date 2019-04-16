@@ -1,7 +1,7 @@
 
 //  main.cpp
 //  TCPServer
-//
+
 //  Created by Siddharth Sen on 29/03/19.
 //  Copyright © 2019 Siddharth Sen. All rights reserved.
 
@@ -70,7 +70,6 @@ int main() {
     }
 
     //while receiving display message ie echo the message
-    
     char buff[4096];
     while (true) {
         //Clear the buffer
