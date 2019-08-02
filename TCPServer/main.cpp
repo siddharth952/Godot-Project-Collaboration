@@ -50,7 +50,7 @@ int main() {
     int clientSocket = accept(listening, (sockaddr*)&client, &clientSize);
                                   
                                   if (clientSocket == -1){
-                                      std::cerr<<"Client not connecting!";
+                                      std::cerr<<"Client is able to connect!";
                                       return -4;
                                   }
     
